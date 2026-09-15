@@ -1,68 +1,149 @@
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
 
 body {
-    background: rgb(233, 77, 5); 
-    color: #000;
+    height: 100vh; 
+    background: purple; 
     padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+
+.container {
+    height: 100%;
+    width: 100%;
+    background: black;
+    color: aliceblue;
+    border-radius: 4%; 
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
 
 header {
-    background: #222;
-    padding: 15px;
-    border-radius: 20px;
-    color: white;
-    text-align: center;
-}
-
-nav ul {
-    list-style: none;
+    padding: 40px;
     display: flex;
-    gap: 15px;
-    margin-top: 10px;
-    justify-content: center;
+    justify-content: space-between; 
+    align-items: center;
+    background: rgb(48, 4, 41); 
+    border-radius: 8px;
 }
 
-nav a {
-    color: white;
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: aliceblue;
     text-decoration: none;
-    font-weight: bold;
+    display: inline-block;
+    transition: transform 0.3s ease;
 }
 
-nav a:hover {
-    color: rgb(233, 77, 5);
+.logo:hover {
+    transform: scale(1.2); 
+    color: rgb(211, 85, 173);
 }
 
-section {
-    background: white;
-    margin-top: 20px;
-    padding: 15px;
-    border-radius: 10px;
+.navbar a {
+    color: aliceblue;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
 }
 
-article {
-    margin-top: 10px;
-    padding: 10px;
-    background: rgb(233, 77, 5);
-    border-radius: 5px;
-    color: white;
+.navbar a.active, .navbar a:hover {
+    color: rgb(211, 85, 173);
 }
 
-article a {
-    color: white;
-    font-weight: bold;
+.inicio {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 60px 5% 0;
+    flex: 1;
 }
 
-/* --- FOOTER --- */
-footer {
-    margin: 20px;
-    padding: 10px;
-    background: #222;
-    color: white;
-    border-radius: 10px;
-    text-align: center;
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.social-icons a {
+    font-size: 30px;
+    color: purple;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: rgb(236, 220, 236);
+}
+
+
+.inicio-detail h1 {
+    font-size: 44px;
+    background: linear-gradient(45deg, #ff00ff, #800080);
+    -webkit-background-clip: text;
+    background-clip: text; 
+    color: transparent; 
+}
+
+.inicio-detail h2 {
+    font-size: 18px;
+    color: rgb(33, 169, 173);
+    margin-bottom: 15px;
+}
+
+.inicio-detail p {
+    margin: 20px 0;
+    line-height: 1.6;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 500px;
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background: purple;
+    border: 3px solid currentColor;
+    border-radius: 40px; 
+    color: beige;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: transparent;
+    transform: translateY(-5px); 
+    color: rgb(211, 85, 173);
+}
+
+.perfil {
+    width: 250px;
+    height: 250px;
+}
+
+.perfil img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 50%;
+    border: 7px solid purple;
+    transition: transform 0.5s ease;
+}
+
+.perfil img:hover {
+    transform: scale(1.05);
 }
