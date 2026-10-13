@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cuéntale a Fabrizio Fernández Crisóstomo sobre tu proyecto de desarrollo web o configuración de sistemas.">
+    <title>Contacto - Fabrizio Fernández</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="index.html" aria-label="Volver al inicio">FF<span>.</span></a>
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="index.html#sobremi">Sobre mí</a></li>
+                <li><a href="index.html#proyectos">Proyectos</a></li>
+                <li><a class="nav-contact" href="#contacto" aria-current="page">Contacto <span aria-hidden="true">↗</span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="contacto" class="contact-section">
+            <div class="contact-glow" aria-hidden="true"></div>
+            <div class="contact-shell">
+                <div class="contact-copy">
+                    <p class="eyebrow"><span class="status-dot"></span> 02 / NUEVOS PROYECTOS</p>
+                    <h1>¿Tienes un proyecto<br><span>en mente?</span></h1>
+                    <p class="contact-description">Cuéntame qué necesita tu negocio. Puedo ayudarte con desarrollo web y configuración de sistemas: comparte los detalles y conversemos sobre la mejor solución.</p>
+                    <div class="contact-note">
+                        <span class="note-icon" aria-hidden="true">✳</span>
+                        <p>Atención personalizada<br>para cada proyecto.</p>
+                    </div>
+                </div>
+
+                <form id="contact-form" class="contact-form">
+                    <div class="form-heading">
+                        <span>CUÉNTAME SOBRE TU PROYECTO</span>
+                        <span class="form-step">01 — 04</span>
+                    </div>
+                    <label for="from_name">Nombre</label>
+                    <input id="from_name" name="from_name" type="text" autocomplete="name" placeholder="Tu nombre completo" required maxlength="100">
+
+                    <label for="from_email">Correo</label>
+                    <input id="from_email" name="from_email" type="email" autocomplete="email" placeholder="nombre@empresa.com" required maxlength="254">
+
+                    <label for="project_type">Tipo de Proyecto</label>
+                    <select id="project_type" name="project_type" required>
+                        <option value="" disabled selected>Selecciona el tipo de proyecto</option>
+                        <option value="Desarrollo Web">Desarrollo Web</option>
+                        <option value="Configuración de Sistemas">Configuración de Sistemas</option>
+                    </select>
+
+                    <label for="project_details">Detalles de lo que necesitan</label>
+                    <textarea id="project_details" name="project_details" rows="4" placeholder="Describe tus objetivos, necesidades y cualquier detalle importante..." required maxlength="3000"></textarea>
+
+                    <button type="submit" class="submit-button">
+                        <span>Enviar consulta</span>
+                        <span class="button-arrow" aria-hidden="true">↗</span>
+                    </button>
+                    <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+                    <p class="privacy-note">Usaré tus datos únicamente para responder a esta consulta.</p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <a class="brand" href="index.html" aria-label="Volver al inicio">FF<span>.</span></a>
+        <p>&copy; 2026 Fabrizio Fernández Crisóstomo</p>
+        <a href="index.html">Volver al portafolio ↑</a>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="emailjs-config.js"></script>
+    <script src="contact.js"></script>
+</body>
+</html>
